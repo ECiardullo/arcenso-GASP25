@@ -1,0 +1,266 @@
+---
+title: "`{ARcenso}`: A Package Born From Chaos, Powered by Community"
+author: "Andrea Gomez Vargas & Emanuel Ciardullo"
+format:
+  revealjs: 
+    theme: custom.scss
+    self-contained: false
+    slide-number: c/t
+    logo: images/LatinR_hex_secundario.png
+    highlight-style: a11y
+    css: logo.css
+    footer: "[**ARcenso home page **](https://soyandrea.github.io/arcenso/)"
+knitr:
+  opts_chunk: 
+    echo: true
+    collapse: true
+    comment: "#>"
+    fig.path: "figures/"
+from: markdown+emoji
+---
+
+## `ARcenso`
+
+::: columns
+::: {.column width="30%"}
+
+<br>
+![hex ARcenso](images/arcenso1.png)
+
+:::
+
+::: {.column width="70%"}
+It is a project supported by the rOpenSci Champions program cohort 2023-2024^[[Introducing rOpenSci Champions - Cohort 2023-2024](https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/)], with Andrea Gómez Vargas as lead developer, Emanuel Ciardullo as co-developer and Luis D. Verde as mentor.
+:::
+
+:::
+
+
+## The project
+
+<br>
+
+**To generate a package that makes available the official data of the national population censuses in Argentina** from the National Institute of Statistics and Censuses INDEC from 1970 to 2022, homogenized, ordered and ready to use. 
+
+
+## Why?
+
+<br>
+
+Currently, the historical census results for **1970, 1980, 1991, 2001, 2010 and 2022** are available in different formats through physical books, PDFs, excel files or REDATAM, without having a unified system or format that would allow working with the data from these six census periods as a database.
+
+
+## Proposal
+
+> From excel tables to **ordered tables** in R
+
+::: columns
+::: {.column width="70%"}
+![Original excel download](images/excel.png){width="110%"}
+
+:::
+
+::: {.column width="30%"}
+![Tidy table in R](images/tabla.png){width="100%"}
+
+:::
+
+:::
+
+
+## Conceptual justification 
+
+::: {.incremental}
+
+Census data is important because: 
+
+- It is a key tool for understanding the characteristics and needs of the population.
+
+- They provide essential data for the planning and development of public policies.
+
+- Social and economic planning
+
+- Academic research and social studies
+
+- Market research and much more...
+
+:::
+
+# Working process
+
+
+## Question - problem
+
+How to get started?
+
+
+::: {.r-stack}
+
+
+
+
+![logos censales de argentina](images/censos.png){.fragment top=200 left=0 width="80%"}
+
+:::
+
+## Before coding: conceptual design
+
+![](images/esquema3.png)
+
+## Let's get to work :hammer_and_wrench:
+
+::: columns
+::: {.column width="15%"}
+
+
+![](images/python.png)
+<br>
+
+![](images/R.png)
+
+:::
+
+::: {.column width="85%"}
+
+
+- webscraping for downloading census tables
+
+- list the downloaded files by extracting their information
+
+- for the conversion of excel tables into tidy format in Rbase
+
+:::
+
+::: 
+
+
+## Problems: rain of excels and non-standardized formats
+
+::: {.r-stack}
+
+![](images/lluvia.png){.fragment top=200 left=0 width="60%"}
+
+
+![](images/cuadro2.png){.fragment top=100 left=0 width="80%"}
+
+![](images/cuadro.png){.fragment top=50 right=50 width="80%"}
+
+
+![](images/meme3.png){.fragment top=50 right=50 width="40%"}
+
+![](images/meme2.png){.fragment top=50 right=50 width="40%"}
+
+:::
+
+## step-by-step work
+
+| Stage | Census years | Geographic level | Notes |
+|----|----|----|----|
+| **1** | 1970 | National and 24 jurisdictions | First available census data |
+|  | 1980 | National level | Jurisdiction-level data not available |
+| 2 | 1991 and 2001 | National level |  |
+| 3 | 2010 | National level |  |
+| 4 | 2022 | National level |  |
+| 5 | 1980 and 1991 | 24 jurisdictions |  |
+| 6 | 2001 and 2010 | 24 jurisdictions |  |
+| 7 | 2022 | 24 jurisdictions |  |
+
+
+
+# {ARcenso} 📦
+
+
+
+## Installation
+
+```{r  eval=FALSE}
+# install.packages("remotes")
+remotes::install_github("SoyAndrea/arcenso")
+```
+
+<br>
+<br>
+
+### Package activation
+
+```{r}
+library(arcenso)
+```
+
+
+## `get_census()` - get tables
+
+```{r}
+get_census( year = 1970, topic = "CONDICIONES HABITACIONALES", geolvl = "Total del país")
+```
+
+
+## `check_repository()` - report of available tables
+
+<br>
+
+```{r}
+check_repository( year = 1970, topic = "CONDICIONES HABITACIONALES", geolvl = "Total del país")
+```
+
+
+## `ARcenso()` - shinyapp for consulting
+
+```{r eval=FALSE}
+ARcenso()
+```
+
+
+
+![](images/shiny.png){width="100%"}
+
+
+## Documentation
+
+```{r echo=FALSE}
+knitr::include_url("https://soyandrea.github.io/arcenso/",height = 600)
+```
+
+
+# Next steps 💫
+
+## 👣
+
+::: {.incremental}
+
+
+- improve documentation
+- continue with the phased roadmap and the process of classification, review and formatting.
+- achieve the optimal standards to reach peer-review
+- to get more users to use the package
+
+
+:::
+
+## Gracias 😁
+
+::: columns
+::: {.column width="50%"}
+
+![](https://avatars.githubusercontent.com/u/45582182?v=4){width="60%" style="border-radius: 80%;"}
+
+**Andrea**
+
+rOpenSci Champion
+
+
+Sociologist
+
+:::
+
+::: {.column width="50%"}
+
+![](https://avatars.githubusercontent.com/u/64991969?v=4){width="60%" style="border-radius: 80%;"}
+
+**Emanuel**
+
+Statistician
+
+:::
+
+:::
