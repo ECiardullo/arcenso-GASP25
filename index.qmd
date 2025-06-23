@@ -1,5 +1,6 @@
 ---
-title: "ARcenso: A Package Born From Chaos, Powered by Community"
+title: "`ARcenso:` A Package Born From Chaos, Powered by Community"
+subtitle: "Government Advances in Statistical Programming - Free Virtual Conference - June 25, 2025"
 author: "Andrea Gomez Vargas & Emanuel Ciardullo"
 format:
   revealjs: 
@@ -19,34 +20,40 @@ knitr:
 from: markdown+emoji
 ---
 
-## `ARcenso`
+## `ARcenso`  {.smaller}
+<br>
 
-It is a project supported by the rOpenSci Champions program cohort 2023-2024^[[Introducing rOpenSci Champions - Cohort 2023-2024](https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/)], with Andrea Gómez Vargas as lead developer, Emanuel Ciardullo as co-developer and Luis D. Verde as mentor.
+Supported by the rOpenSci Champions Program cohort 2023-2024^[[Introducing rOpenSci Champions - Cohort 2023-2024](https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/)], this project is led by lead developer Andrea Gómez Vargas, co-developer Emanuel Ciardullo, and mentor Luis D. Verde.
 
-
-
-
-## The project
+It is a citizen-driven initiative that emerged from our professional experience working with census data at the National Institute of Statistics and Census of Argentina (INDEC).
 
 <br>
 
-**To generate a package that makes available the official data of the national population censuses in Argentina** from the National Institute of Statistics and Censuses INDEC from 1970 to 2022, homogenized, ordered and ready to use. 
+![](images/icon_lettering_white.svg){width="30%"}
 
-
-## Why?
+## Project Overview 
 
 <br>
 
-Currently, the historical census results for **1970, 1980, 1991, 2001, 2010 and 2022** are available in different formats through physical books, PDFs, excel files or REDATAM, without having a unified system or format that would allow working with the data from these six census periods as a database.
+
+**Develop an R data package that makes available the official national population census data of Argentina**, produced by the National Institute of Statistics and Censuses (INDEC), covering the period from 1970 to 2022. The data are homogenized, organized, and ready to use. The package provides open access to these datasets, facilitating their use by the public, researchers, and decision-makers.
 
 
-## Proposal
+## Problem Statement 
+
+<br>
+
+Historical census results for **1970, 1980, 1991, 2001, 2010 and 2022** in Argentina are available in different formats through physical books, PDFs, excel files, and REDATAM outputs, without having a unified system or format that would allow working with the data from these six census periods as a database.
+
+This fragmentation limits data accessibility, interoperability, and reuse, especially for users working within the R environment.
+
+## Proposed Solution
 
 > From excel tables to **ordered tables** in R
 
 ::: columns
 ::: {.column width="70%"}
-![Original excel download](images/excel.png){width="110%"}
+![Original excel download](images/excel.png){width="100%"}
 
 :::
 
@@ -60,43 +67,61 @@ Currently, the historical census results for **1970, 1980, 1991, 2001, 2010 and 
 
 # Conceptual framework
 
-## FAIR principles
+## FAIR Principles in ARcenso {.smaller}
 
+**Findable:**
 
-## handbook 
+Centralized census data covering six national census periods (1970–2022), openly published in a single R data package with clear versioning.
 
-Diseño conceptual
+**Accessible:**
 
-::: {.incremental}
+Publicly available, homogenized census datasets provided in open formats and accompanied by comprehensive documentation and metadata.
 
-Census data is important because: 
+**Interoperable:**
 
-- It is a key tool for understanding the characteristics and needs of the population.
+Tidy, well-structured tables that enable easy integration with other demographic, geographic, and socioeconomic datasets within the R ecosystem.
 
-- They provide essential data for the planning and development of public policies.
+**Reusable:**
 
-- Social and economic planning
+Includes detailed variable descriptions, standardized coding across census years, open licensing, and reproducible data structures that facilitate long-term use and cross-study comparisons.
 
-- Academic research and social studies
+## Census Data: Themes and Structure (UN Framework){.smaller}
 
-- Market research and much more...
+::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+#### Census Topics
+- **Core:** Essential variables  
+  (e.g., age, sex, population)
+- **Derived-core:** Calculated variables  
+  (e.g., fertility rates)
+- **Additional:** Country-specific topics  
+  (e.g., religion, housing quality)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+#### Conceptual Units
+- **Population:** Individuals
+- **Housing:** Physical dwellings
+- **Household:** People sharing a dwelling
+:::
+
+::: {.column width="30%"}
+#### Geographic Coverage
+- **National level**
+- **Jurisdictional level**
+:::
 
 :::
 
-# Working process
 
-
-## How to get started?
-
-
-::: {.r-stack}
-
-
-
-
-![logos censales de argentina](images/censos.png){.fragment top=200 left=0 width="80%"}
-
-:::
+# From Chaos to Package
 
 
 ## Problems: rain of excels and non-standardized formats
@@ -105,20 +130,16 @@ Census data is important because:
 
 ![](images/lluvia.png){.fragment top=200 left=0 width="60%"}
 
-
 ![](images/cuadro2.png){.fragment top=100 left=0 width="80%"}
 
 ![](images/cuadro.png){.fragment top=50 right=50 width="80%"}
 
 
-![](images/meme3.png){.fragment top=50 right=50 width="40%"}
-
-![](images/meme2.png){.fragment top=50 right=50 width="40%"}
-
 :::
 
 
-## Let's get to work :hammer_and_wrench:
+
+## The Process {.smaller}
 
 ::: columns
 ::: {.column width="15%"}
@@ -135,13 +156,18 @@ Census data is important because:
 
 ::: {.column width="85%"}
 
-REVISAR Y ADAPTAR
-- webscraping for downloading census tables
+- **Download:** Automated web scraping to collect census tables from official sources.
 
-- list the downloaded files by extracting their information
+- **Select:** Listed, classified, and extracted relevant files and metadata (census year, geography, topics).
 
-- for the conversion of excel tables into tidy format in Rbase
+- **Transform:** Converted Excel tables into tidy, standardized datasets using base R.
 
+- **Function development:** Built R functions to access, manipulate, and visualize the data efficiently.
+
+- **Package creation:** Integrated datasets and functions into the ARcenso package for easy use and reproducibility.
+
+- **Version control:** Used Git and GitHub for tracking changes, collaboration, and release management.
+ 
 :::
 
 ::: 
@@ -164,11 +190,11 @@ REVISAR Y ADAPTAR
 
 
 
-# {ARcenso} 📦
+## {ARcenso} 📦
 
+<br>
 
-
-## Installation
+### Installation
 
 ```{r  eval=FALSE}
 # install.packages("remotes")
@@ -218,24 +244,40 @@ ARcenso()
 knitr::include_url("https://soyandrea.github.io/arcenso/",height = 600)
 ```
 
-# Comunidad
+# Powered by Community 🤝
 
-# Next steps 💫
+## Thanks to Our Community
 
-## 👣
+![](images/arcenso-meet.png)
 
-::: {.incremental}
-
-
-- improve documentation
-- continue with the phased roadmap and the process of classification, review and formatting.
-- achieve the optimal standards to reach peer-review
-- to get more users to use the package
+Thanks to the feedback, collaboration, and support of R communities such as rOpenSci, LatinR, and R en Buenos Aires, as well as the joint work of fellow demographers, statisticians, and sociologists, `ARcenso` was built.
 
 
-:::
+## Community involvement provided:
 
-## Thanks 😁
+- Technical assistance in solving coding and data challenges.
+
+- Validation: Ensuring data quality and usability.
+
+- Dissemination: Promoting the use and awareness of the package.
+
+- Inspiration: driving continuous improvements and new features.
+
+
+<!-- ## Next steps 💫 -->
+
+<!-- ::: {.incremental} -->
+
+
+<!-- - improve documentation -->
+<!-- - continue with the phased roadmap and the process of classification, review and formatting. -->
+<!-- - achieve the optimal standards to reach peer-review -->
+<!-- - to get more users to use the package -->
+
+
+<!-- ::: -->
+
+## Gracias 😁
 
 ::: columns
 ::: {.column width="50%"}
@@ -244,10 +286,11 @@ knitr::include_url("https://soyandrea.github.io/arcenso/",height = 600)
 
 **Andrea**
 
+Sociologist
+
+
 rOpenSci Champion
 
-
-Sociologist
 
 :::
 
