@@ -1,10 +1,11 @@
 ---
-title: "`ARcenso:` A Package Born From Chaos, Powered by Community"
-subtitle: "Government Advances in Statistical Programming - Free Virtual Conference - June 25, 2025"
+title: "`ARcenso`: a Package Born From Chaos, Powered by Community"
+institute: "Government Advances in Statistical Programming - GASP 2025"
+date: "June 25, 2025"
 author: "Andrea Gomez Vargas & Emanuel Ciardullo"
 format:
   revealjs: 
-    theme: custom.scss
+    theme: [default, custom.scss]
     self-contained: false
     slide-number: c/t
     logo: images/arcenso.png
@@ -20,7 +21,7 @@ knitr:
 from: markdown+emoji
 ---
 
-## `ARcenso`  {.smaller}
+## ARcenso{.smaller}
 <br>
 
 Supported by the rOpenSci Champions Program cohort 2023-2024^[[Introducing rOpenSci Champions - Cohort 2023-2024](https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/)], this project is led by lead developer Andrea Gómez Vargas, co-developer Emanuel Ciardullo, and mentor Luis D. Verde.
@@ -67,7 +68,7 @@ This fragmentation limits data accessibility, interoperability, and reuse, espec
 
 # Conceptual framework
 
-## FAIR Principles in ARcenso {.smaller}
+## FAIR Principles{.smaller}
 
 **Findable:**
 
@@ -87,6 +88,8 @@ Includes detailed variable descriptions, standardized coding across census years
 
 ## Census Data: Themes and Structure (UN Framework){.smaller}
 
+<br>
+
 ::: {.columns}
 
 ::: {.column width="5%"}
@@ -99,7 +102,7 @@ Includes detailed variable descriptions, standardized coding across census years
 - **Derived-core:** Calculated variables  
   (e.g., fertility rates)
 - **Additional:** Country-specific topics  
-  (e.g., religion, housing quality)
+  (e.g., religion)
 :::
 
 ::: {.column width="5%"}
@@ -121,14 +124,14 @@ Includes detailed variable descriptions, standardized coding across census years
 :::
 
 
-# From Chaos to Package
+# From Chaos to Package 📦
 
 
 ## Problems: rain of excels and non-standardized formats
 
 ::: {.r-stack}
 
-![](images/lluvia.png){.fragment top=200 left=0 width="60%"}
+![](images/lluvia.png){.fragment top=200 left=0 width="50%"}
 
 ![](images/cuadro2.png){.fragment top=100 left=0 width="80%"}
 
@@ -140,6 +143,8 @@ Includes detailed variable descriptions, standardized coding across census years
 
 
 ## The Process {.smaller}
+
+<br>
 
 ::: columns
 ::: {.column width="15%"}
@@ -176,6 +181,8 @@ Includes detailed variable descriptions, standardized coding across census years
 
 ## Data Availability Roadmap {.tabla-chica}
 
+<br>
+
 | Stage | Census years      | Geographic level               | 
 |-------|-------------------|--------------------------------|
 | 1     | 1970              | National and 24 jurisdictions  | 
@@ -211,31 +218,41 @@ library(arcenso)
 ```
 
 
-## `get_census()` - get tables
+## `get_census()`
+
+> get tables 
 
 ```{r}
-get_census( year = 1970, topic = "CONDICIONES HABITACIONALES", geolvl = "Total del país")
+get_census( year = 1970, 
+            topic = "CONDICIONES HABITACIONALES", 
+            geolvl = "Total del país")
 ```
 
 
-## `check_repository()` - report of available tables
+## `check_repository()`
+
+> report of available tables
 
 <br>
 
 ```{r}
-check_repository( year = 1970, topic = "CONDICIONES HABITACIONALES", geolvl = "Total del país")
+check_repository( year = 1970, 
+                  topic = "CONDICIONES HABITACIONALES", 
+                  geolvl = "Total del país")
 ```
 
 
-## `ARcenso()` - shinyapp for consulting
+## `ARcenso()`
+
+> shinyapp for consulting
 
 ```{r eval=FALSE}
-ARcenso()
+arcenso()
 ```
 
 
 
-![](images/shiny.png){width="100%"}
+![](images/shiny.png){width="120%" fig-align="center"}
 
 
 ## Documentation
@@ -282,9 +299,9 @@ Thanks to the feedback, collaboration, and support of R communities such as rOpe
 ::: columns
 ::: {.column width="50%"}
 
-![](https://avatars.githubusercontent.com/u/45582182?v=4){width="60%" style="border-radius: 80%;"}
+![](https://avatars.githubusercontent.com/u/45582182?v=4){width="50%" style="border-radius: 80%;"}
 
-**Andrea**
+[**Andrea**](https://www.linkedin.com/in/andreasociologa/)
 
 Sociologist
 
@@ -296,9 +313,9 @@ rOpenSci Champion
 
 ::: {.column width="50%"}
 
-![](https://avatars.githubusercontent.com/u/64991969?v=4){width="60%" style="border-radius: 80%;"}
+![](https://avatars.githubusercontent.com/u/64991969?v=4){width="50%" style="border-radius: 80%;"}
 
-**Emanuel**
+[**Emanuel**](https://www.linkedin.com/in/eciardullo/)
 
 Statistician
 

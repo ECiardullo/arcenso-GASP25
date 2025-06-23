@@ -8,10 +8,11 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.57">
+  <meta name="generator" content="quarto-1.4.553">
 
   <meta name="author" content="Andrea Gomez Vargas &amp; Emanuel Ciardullo">
-  <title>ARcenso: A Package Born From Chaos, Powered by Community</title>
+  <meta name="dcterms.date" content="2025-06-25">
+  <title>ARcenso: a Package Born From Chaos, Powered by Community</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -42,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -392,20 +393,23 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><code>ARcenso:</code> A Package Born From Chaos, Powered by Community</h1>
-  <p class="subtitle">Government Advances in Statistical Programming - Free Virtual Conference - June 25, 2025</p>
+  <h1 class="title"><code>ARcenso</code>: a Package Born From Chaos, Powered by Community</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
 Andrea Gomez Vargas &amp; Emanuel Ciardullo 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            Government Advances in Statistical Programming - GASP 2025
+          </p>
+    </div>
 </div>
 
+  <p class="date">2025-06-25</p>
 </section>
 <section id="arcenso" class="slide level2 smaller">
-<h2><code>ARcenso</code></h2>
+<h2>ARcenso</h2>
 <p><br></p>
 <p>Supported by the rOpenSci Champions Program cohort 2023-2024<sup>1</sup>, this project is led by lead developer Andrea Gómez Vargas, co-developer Emanuel Ciardullo, and mentor Luis D. Verde.</p>
 <p>It is a citizen-driven initiative that emerged from our professional experience working with census data at the National Institute of Statistics and Census of Argentina (INDEC).</p>
@@ -443,15 +447,16 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <figcaption>Tidy table in R</figcaption>
 </figure>
 </div>
-</div></div>
+</div>
+</div>
 </section>
 <section>
 <section id="conceptual-framework" class="title-slide slide level1 center">
 <h1>Conceptual framework</h1>
 
 </section>
-<section id="fair-principles-in-arcenso" class="slide level2 smaller">
-<h2>FAIR Principles in ARcenso</h2>
+<section id="fair-principles" class="slide level2 smaller">
+<h2>FAIR Principles</h2>
 <p><strong>Findable:</strong></p>
 <p>Centralized census data covering six national census periods (1970–2022), openly published in a single R data package with clear versioning.</p>
 <p><strong>Accessible:</strong></p>
@@ -463,6 +468,7 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 </section>
 <section id="census-data-themes-and-structure-un-framework" class="slide level2 smaller">
 <h2>Census Data: Themes and Structure (UN Framework)</h2>
+<p><br></p>
 <div class="columns">
 <div class="column" style="width:5%;">
 
@@ -474,7 +480,7 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <li><strong>Derived-core:</strong> Calculated variables<br>
 (e.g., fertility rates)</li>
 <li><strong>Additional:</strong> Country-specific topics<br>
-(e.g., religion, housing quality)</li>
+(e.g., religion)</li>
 </ul>
 </div><div class="column" style="width:5%;">
 
@@ -491,23 +497,25 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <li><strong>National level</strong></li>
 <li><strong>Jurisdictional level</strong></li>
 </ul>
-</div></div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="from-chaos-to-package" class="title-slide slide level1 center">
-<h1>From Chaos to Package</h1>
+<h1>From Chaos to Package 📦</h1>
 
 </section>
 <section id="problems-rain-of-excels-and-non-standardized-formats" class="slide level2">
 <h2>Problems: rain of excels and non-standardized formats</h2>
 <div class="r-stack">
-<p><img data-src="images/lluvia.png" class="fragment" style="width:60.0%" data-top="200" data-left="0"></p>
+<p><img data-src="images/lluvia.png" class="fragment" style="width:50.0%" data-top="200" data-left="0"></p>
 <p><img data-src="images/cuadro2.png" class="fragment" style="width:80.0%" data-top="100" data-left="0"></p>
 <p><img data-src="images/cuadro.png" class="fragment" style="width:80.0%" data-top="50" data-right="50"></p>
 </div>
 </section>
 <section id="the-process" class="slide level2 smaller">
 <h2>The Process</h2>
+<p><br></p>
 <div class="columns">
 <div class="column" style="width:15%;">
 <p><img data-src="images/python.png"> <br></p>
@@ -522,11 +530,13 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <li><p><strong>Package creation:</strong> Integrated datasets and functions into the ARcenso package for easy use and reproducibility.</p></li>
 <li><p><strong>Version control:</strong> Used Git and GitHub for tracking changes, collaboration, and release management.</p></li>
 </ul>
-</div></div>
+</div>
+</div>
 </section>
 <section id="data-availability-roadmap" class="slide level2 tabla-chica">
 <h2>Data Availability Roadmap</h2>
-<table class="caption-top">
+<p><br></p>
+<table>
 <thead>
 <tr class="header">
 <th>Stage</th>
@@ -592,102 +602,115 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(arcenso)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="get_census---get-tables" class="slide level2">
-<h2><code>get_census()</code> - get tables</h2>
+<section id="get_census" class="slide level2">
+<h2><code>get_census()</code></h2>
+<blockquote>
+<p>get tables</p>
+</blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">get_census</span>( <span class="at">year =</span> <span class="dv">1970</span>, <span class="at">topic =</span> <span class="st">"CONDICIONES HABITACIONALES"</span>, <span class="at">geolvl =</span> <span class="st">"Total del país"</span>)</span>
-<span id="cb3-2"><a href=""></a><span class="co">#&gt; $c70_total_del_pais_poblacion_c18</span></span>
-<span id="cb3-3"><a href=""></a><span class="co">#&gt;                   regimen_de_tenencia hogares personas  cuartos</span></span>
-<span id="cb3-4"><a href=""></a><span class="co">#&gt; 1                         Propietario 3553250 13778700 11197900</span></span>
-<span id="cb3-5"><a href=""></a><span class="co">#&gt; 2            Inquilino o arrendatario 1380950  4692800  3305350</span></span>
-<span id="cb3-6"><a href=""></a><span class="co">#&gt; 3 Ocupante en relación de dependencia  353300  1402500   880050</span></span>
-<span id="cb3-7"><a href=""></a><span class="co">#&gt; 4                   Ocupante gratuito  575650  2271150  1196500</span></span>
-<span id="cb3-8"><a href=""></a><span class="co">#&gt; 5                    En otro carácter  192950   816350   419800</span></span>
-<span id="cb3-9"><a href=""></a><span class="co">#&gt; </span></span>
-<span id="cb3-10"><a href=""></a><span class="co">#&gt; $c70_total_del_pais_poblacion_c20</span></span>
-<span id="cb3-11"><a href=""></a><span class="co">#&gt;     tama?o_hogar                     regimen_tenencia hogares</span></span>
-<span id="cb3-12"><a href=""></a><span class="co">#&gt; 1   De 1 persona                                Total  615900</span></span>
-<span id="cb3-13"><a href=""></a><span class="co">#&gt; 2   De 1 persona                          Propietario  255900</span></span>
-<span id="cb3-14"><a href=""></a><span class="co">#&gt; 3   De 1 persona             Inquilino o arrendatario  199350</span></span>
-<span id="cb3-15"><a href=""></a><span class="co">#&gt; 4   De 1 persona Ocupante con relación de dependencia   52600</span></span>
-<span id="cb3-16"><a href=""></a><span class="co">#&gt; 5   De 1 persona                    Ocupante gratuito   82100</span></span>
-<span id="cb3-17"><a href=""></a><span class="co">#&gt; 6   De 1 persona                                 Otro   25950</span></span>
-<span id="cb3-18"><a href=""></a><span class="co">#&gt; 7  De 2 personas                                Total 1125250</span></span>
-<span id="cb3-19"><a href=""></a><span class="co">#&gt; 8  De 2 personas                          Propietario  652950</span></span>
-<span id="cb3-20"><a href=""></a><span class="co">#&gt; 9  De 2 personas             Inquilino o arrendatario  302400</span></span>
-<span id="cb3-21"><a href=""></a><span class="co">#&gt; 10 De 2 personas Ocupante con relación de dependencia   49250</span></span>
-<span id="cb3-22"><a href=""></a><span class="co">#&gt; 11 De 2 personas                    Ocupante gratuito   91300</span></span>
-<span id="cb3-23"><a href=""></a><span class="co">#&gt; 12 De 2 personas                                 Otro   29350</span></span>
-<span id="cb3-24"><a href=""></a><span class="co">#&gt; 13 De 3 personas                                Total 1230600</span></span>
-<span id="cb3-25"><a href=""></a><span class="co">#&gt; 14 De 3 personas                          Propietario  744800</span></span>
-<span id="cb3-26"><a href=""></a><span class="co">#&gt; 15 De 3 personas             Inquilino o arrendatario  290650</span></span>
-<span id="cb3-27"><a href=""></a><span class="co">#&gt; 16 De 3 personas Ocupante con relación de dependencia   62150</span></span>
-<span id="cb3-28"><a href=""></a><span class="co">#&gt; 17 De 3 personas                    Ocupante gratuito  103200</span></span>
-<span id="cb3-29"><a href=""></a><span class="co">#&gt; 18 De 3 personas                                 Otro   29800</span></span>
-<span id="cb3-30"><a href=""></a><span class="co">#&gt; 19 De 4 personas                                Total 1255000</span></span>
-<span id="cb3-31"><a href=""></a><span class="co">#&gt; 20 De 4 personas                          Propietario  787900</span></span>
-<span id="cb3-32"><a href=""></a><span class="co">#&gt; 21 De 4 personas             Inquilino o arrendatario  266000</span></span>
-<span id="cb3-33"><a href=""></a><span class="co">#&gt; 22 De 4 personas Ocupante con relación de dependencia   65650</span></span>
-<span id="cb3-34"><a href=""></a><span class="co">#&gt; 23 De 4 personas                    Ocupante gratuito  102850</span></span>
-<span id="cb3-35"><a href=""></a><span class="co">#&gt; 24 De 4 personas                                 Otro   32600</span></span>
-<span id="cb3-36"><a href=""></a><span class="co">#&gt; 25 De 5 personas                                Total  818550</span></span>
-<span id="cb3-37"><a href=""></a><span class="co">#&gt; 26 De 5 personas                          Propietario  516100</span></span>
-<span id="cb3-38"><a href=""></a><span class="co">#&gt; 27 De 5 personas             Inquilino o arrendatario  157500</span></span>
-<span id="cb3-39"><a href=""></a><span class="co">#&gt; 28 De 5 personas Ocupante con relación de dependencia   48200</span></span>
-<span id="cb3-40"><a href=""></a><span class="co">#&gt; 29 De 5 personas                    Ocupante gratuito   71550</span></span>
-<span id="cb3-41"><a href=""></a><span class="co">#&gt; 30 De 5 personas                                 Otro   25200</span></span>
-<span id="cb3-42"><a href=""></a><span class="co">#&gt; 31 De 6 personas                                Total  443250</span></span>
-<span id="cb3-43"><a href=""></a><span class="co">#&gt; 32 De 6 personas                          Propietario  272000</span></span>
-<span id="cb3-44"><a href=""></a><span class="co">#&gt; 33 De 6 personas             Inquilino o arrendatario   80000</span></span>
-<span id="cb3-45"><a href=""></a><span class="co">#&gt; 34 De 6 personas Ocupante con relación de dependencia   29000</span></span>
-<span id="cb3-46"><a href=""></a><span class="co">#&gt; 35 De 6 personas                    Ocupante gratuito   45750</span></span>
-<span id="cb3-47"><a href=""></a><span class="co">#&gt; 36 De 6 personas                                 Otro   16500</span></span>
-<span id="cb3-48"><a href=""></a><span class="co">#&gt; 37 De 7 personas                                Total  276750</span></span>
-<span id="cb3-49"><a href=""></a><span class="co">#&gt; 38 De 7 personas                          Propietario  163400</span></span>
-<span id="cb3-50"><a href=""></a><span class="co">#&gt; 39 De 7 personas             Inquilino o arrendatario   44950</span></span>
-<span id="cb3-51"><a href=""></a><span class="co">#&gt; 40 De 7 personas Ocupante con relación de dependencia   19950</span></span>
-<span id="cb3-52"><a href=""></a><span class="co">#&gt; 41 De 7 personas                    Ocupante gratuito   35200</span></span>
-<span id="cb3-53"><a href=""></a><span class="co">#&gt; 42 De 7 personas                                 Otro   13250</span></span>
-<span id="cb3-54"><a href=""></a><span class="co">#&gt; 43 De 8 personas                                Total  121450</span></span>
-<span id="cb3-55"><a href=""></a><span class="co">#&gt; 44 De 8 personas                          Propietario   70600</span></span>
-<span id="cb3-56"><a href=""></a><span class="co">#&gt; 45 De 8 personas             Inquilino o arrendatario   18250</span></span>
-<span id="cb3-57"><a href=""></a><span class="co">#&gt; 46 De 8 personas Ocupante con relación de dependencia   10050</span></span>
-<span id="cb3-58"><a href=""></a><span class="co">#&gt; 47 De 8 personas                    Ocupante gratuito   16250</span></span>
-<span id="cb3-59"><a href=""></a><span class="co">#&gt; 48 De 8 personas                                 Otro    6300</span></span>
-<span id="cb3-60"><a href=""></a><span class="co">#&gt; 49 De 9 personas                                Total   76000</span></span>
-<span id="cb3-61"><a href=""></a><span class="co">#&gt; 50 De 9 personas                          Propietario   40950</span></span>
-<span id="cb3-62"><a href=""></a><span class="co">#&gt; 51 De 9 personas             Inquilino o arrendatario    9400</span></span>
-<span id="cb3-63"><a href=""></a><span class="co">#&gt; 52 De 9 personas Ocupante con relación de dependencia    7150</span></span>
-<span id="cb3-64"><a href=""></a><span class="co">#&gt; 53 De 9 personas                    Ocupante gratuito   12900</span></span>
-<span id="cb3-65"><a href=""></a><span class="co">#&gt; 54 De 9 personas                                 Otro    5600</span></span>
-<span id="cb3-66"><a href=""></a><span class="co">#&gt; 55   De 10 y más                                Total   93350</span></span>
-<span id="cb3-67"><a href=""></a><span class="co">#&gt; 56   De 10 y más                          Propietario   48650</span></span>
-<span id="cb3-68"><a href=""></a><span class="co">#&gt; 57   De 10 y más             Inquilino o arrendatario   12450</span></span>
-<span id="cb3-69"><a href=""></a><span class="co">#&gt; 58   De 10 y más Ocupante con relación de dependencia    9300</span></span>
-<span id="cb3-70"><a href=""></a><span class="co">#&gt; 59   De 10 y más                    Ocupante gratuito   14550</span></span>
-<span id="cb3-71"><a href=""></a><span class="co">#&gt; 60   De 10 y más                                 Otro    8400</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">get_census</span>( <span class="at">year =</span> <span class="dv">1970</span>, </span>
+<span id="cb3-2"><a href=""></a>            <span class="at">topic =</span> <span class="st">"CONDICIONES HABITACIONALES"</span>, </span>
+<span id="cb3-3"><a href=""></a>            <span class="at">geolvl =</span> <span class="st">"Total del país"</span>)</span>
+<span id="cb3-4"><a href=""></a><span class="co">#&gt; $c70_total_del_pais_poblacion_c18</span></span>
+<span id="cb3-5"><a href=""></a><span class="co">#&gt;                   regimen_de_tenencia hogares personas  cuartos</span></span>
+<span id="cb3-6"><a href=""></a><span class="co">#&gt; 1                         Propietario 3553250 13778700 11197900</span></span>
+<span id="cb3-7"><a href=""></a><span class="co">#&gt; 2            Inquilino o arrendatario 1380950  4692800  3305350</span></span>
+<span id="cb3-8"><a href=""></a><span class="co">#&gt; 3 Ocupante en relación de dependencia  353300  1402500   880050</span></span>
+<span id="cb3-9"><a href=""></a><span class="co">#&gt; 4                   Ocupante gratuito  575650  2271150  1196500</span></span>
+<span id="cb3-10"><a href=""></a><span class="co">#&gt; 5                    En otro carácter  192950   816350   419800</span></span>
+<span id="cb3-11"><a href=""></a><span class="co">#&gt; </span></span>
+<span id="cb3-12"><a href=""></a><span class="co">#&gt; $c70_total_del_pais_poblacion_c20</span></span>
+<span id="cb3-13"><a href=""></a><span class="co">#&gt;     tama?o_hogar                     regimen_tenencia hogares</span></span>
+<span id="cb3-14"><a href=""></a><span class="co">#&gt; 1   De 1 persona                                Total  615900</span></span>
+<span id="cb3-15"><a href=""></a><span class="co">#&gt; 2   De 1 persona                          Propietario  255900</span></span>
+<span id="cb3-16"><a href=""></a><span class="co">#&gt; 3   De 1 persona             Inquilino o arrendatario  199350</span></span>
+<span id="cb3-17"><a href=""></a><span class="co">#&gt; 4   De 1 persona Ocupante con relación de dependencia   52600</span></span>
+<span id="cb3-18"><a href=""></a><span class="co">#&gt; 5   De 1 persona                    Ocupante gratuito   82100</span></span>
+<span id="cb3-19"><a href=""></a><span class="co">#&gt; 6   De 1 persona                                 Otro   25950</span></span>
+<span id="cb3-20"><a href=""></a><span class="co">#&gt; 7  De 2 personas                                Total 1125250</span></span>
+<span id="cb3-21"><a href=""></a><span class="co">#&gt; 8  De 2 personas                          Propietario  652950</span></span>
+<span id="cb3-22"><a href=""></a><span class="co">#&gt; 9  De 2 personas             Inquilino o arrendatario  302400</span></span>
+<span id="cb3-23"><a href=""></a><span class="co">#&gt; 10 De 2 personas Ocupante con relación de dependencia   49250</span></span>
+<span id="cb3-24"><a href=""></a><span class="co">#&gt; 11 De 2 personas                    Ocupante gratuito   91300</span></span>
+<span id="cb3-25"><a href=""></a><span class="co">#&gt; 12 De 2 personas                                 Otro   29350</span></span>
+<span id="cb3-26"><a href=""></a><span class="co">#&gt; 13 De 3 personas                                Total 1230600</span></span>
+<span id="cb3-27"><a href=""></a><span class="co">#&gt; 14 De 3 personas                          Propietario  744800</span></span>
+<span id="cb3-28"><a href=""></a><span class="co">#&gt; 15 De 3 personas             Inquilino o arrendatario  290650</span></span>
+<span id="cb3-29"><a href=""></a><span class="co">#&gt; 16 De 3 personas Ocupante con relación de dependencia   62150</span></span>
+<span id="cb3-30"><a href=""></a><span class="co">#&gt; 17 De 3 personas                    Ocupante gratuito  103200</span></span>
+<span id="cb3-31"><a href=""></a><span class="co">#&gt; 18 De 3 personas                                 Otro   29800</span></span>
+<span id="cb3-32"><a href=""></a><span class="co">#&gt; 19 De 4 personas                                Total 1255000</span></span>
+<span id="cb3-33"><a href=""></a><span class="co">#&gt; 20 De 4 personas                          Propietario  787900</span></span>
+<span id="cb3-34"><a href=""></a><span class="co">#&gt; 21 De 4 personas             Inquilino o arrendatario  266000</span></span>
+<span id="cb3-35"><a href=""></a><span class="co">#&gt; 22 De 4 personas Ocupante con relación de dependencia   65650</span></span>
+<span id="cb3-36"><a href=""></a><span class="co">#&gt; 23 De 4 personas                    Ocupante gratuito  102850</span></span>
+<span id="cb3-37"><a href=""></a><span class="co">#&gt; 24 De 4 personas                                 Otro   32600</span></span>
+<span id="cb3-38"><a href=""></a><span class="co">#&gt; 25 De 5 personas                                Total  818550</span></span>
+<span id="cb3-39"><a href=""></a><span class="co">#&gt; 26 De 5 personas                          Propietario  516100</span></span>
+<span id="cb3-40"><a href=""></a><span class="co">#&gt; 27 De 5 personas             Inquilino o arrendatario  157500</span></span>
+<span id="cb3-41"><a href=""></a><span class="co">#&gt; 28 De 5 personas Ocupante con relación de dependencia   48200</span></span>
+<span id="cb3-42"><a href=""></a><span class="co">#&gt; 29 De 5 personas                    Ocupante gratuito   71550</span></span>
+<span id="cb3-43"><a href=""></a><span class="co">#&gt; 30 De 5 personas                                 Otro   25200</span></span>
+<span id="cb3-44"><a href=""></a><span class="co">#&gt; 31 De 6 personas                                Total  443250</span></span>
+<span id="cb3-45"><a href=""></a><span class="co">#&gt; 32 De 6 personas                          Propietario  272000</span></span>
+<span id="cb3-46"><a href=""></a><span class="co">#&gt; 33 De 6 personas             Inquilino o arrendatario   80000</span></span>
+<span id="cb3-47"><a href=""></a><span class="co">#&gt; 34 De 6 personas Ocupante con relación de dependencia   29000</span></span>
+<span id="cb3-48"><a href=""></a><span class="co">#&gt; 35 De 6 personas                    Ocupante gratuito   45750</span></span>
+<span id="cb3-49"><a href=""></a><span class="co">#&gt; 36 De 6 personas                                 Otro   16500</span></span>
+<span id="cb3-50"><a href=""></a><span class="co">#&gt; 37 De 7 personas                                Total  276750</span></span>
+<span id="cb3-51"><a href=""></a><span class="co">#&gt; 38 De 7 personas                          Propietario  163400</span></span>
+<span id="cb3-52"><a href=""></a><span class="co">#&gt; 39 De 7 personas             Inquilino o arrendatario   44950</span></span>
+<span id="cb3-53"><a href=""></a><span class="co">#&gt; 40 De 7 personas Ocupante con relación de dependencia   19950</span></span>
+<span id="cb3-54"><a href=""></a><span class="co">#&gt; 41 De 7 personas                    Ocupante gratuito   35200</span></span>
+<span id="cb3-55"><a href=""></a><span class="co">#&gt; 42 De 7 personas                                 Otro   13250</span></span>
+<span id="cb3-56"><a href=""></a><span class="co">#&gt; 43 De 8 personas                                Total  121450</span></span>
+<span id="cb3-57"><a href=""></a><span class="co">#&gt; 44 De 8 personas                          Propietario   70600</span></span>
+<span id="cb3-58"><a href=""></a><span class="co">#&gt; 45 De 8 personas             Inquilino o arrendatario   18250</span></span>
+<span id="cb3-59"><a href=""></a><span class="co">#&gt; 46 De 8 personas Ocupante con relación de dependencia   10050</span></span>
+<span id="cb3-60"><a href=""></a><span class="co">#&gt; 47 De 8 personas                    Ocupante gratuito   16250</span></span>
+<span id="cb3-61"><a href=""></a><span class="co">#&gt; 48 De 8 personas                                 Otro    6300</span></span>
+<span id="cb3-62"><a href=""></a><span class="co">#&gt; 49 De 9 personas                                Total   76000</span></span>
+<span id="cb3-63"><a href=""></a><span class="co">#&gt; 50 De 9 personas                          Propietario   40950</span></span>
+<span id="cb3-64"><a href=""></a><span class="co">#&gt; 51 De 9 personas             Inquilino o arrendatario    9400</span></span>
+<span id="cb3-65"><a href=""></a><span class="co">#&gt; 52 De 9 personas Ocupante con relación de dependencia    7150</span></span>
+<span id="cb3-66"><a href=""></a><span class="co">#&gt; 53 De 9 personas                    Ocupante gratuito   12900</span></span>
+<span id="cb3-67"><a href=""></a><span class="co">#&gt; 54 De 9 personas                                 Otro    5600</span></span>
+<span id="cb3-68"><a href=""></a><span class="co">#&gt; 55   De 10 y más                                Total   93350</span></span>
+<span id="cb3-69"><a href=""></a><span class="co">#&gt; 56   De 10 y más                          Propietario   48650</span></span>
+<span id="cb3-70"><a href=""></a><span class="co">#&gt; 57   De 10 y más             Inquilino o arrendatario   12450</span></span>
+<span id="cb3-71"><a href=""></a><span class="co">#&gt; 58   De 10 y más Ocupante con relación de dependencia    9300</span></span>
+<span id="cb3-72"><a href=""></a><span class="co">#&gt; 59   De 10 y más                    Ocupante gratuito   14550</span></span>
+<span id="cb3-73"><a href=""></a><span class="co">#&gt; 60   De 10 y más                                 Otro    8400</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="check_repository---report-of-available-tables" class="slide level2">
-<h2><code>check_repository()</code> - report of available tables</h2>
+<section id="check_repository" class="slide level2">
+<h2><code>check_repository()</code></h2>
+<blockquote>
+<p>report of available tables</p>
+</blockquote>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">check_repository</span>( <span class="at">year =</span> <span class="dv">1970</span>, <span class="at">topic =</span> <span class="st">"CONDICIONES HABITACIONALES"</span>, <span class="at">geolvl =</span> <span class="st">"Total del país"</span>)</span>
-<span id="cb4-2"><a href=""></a><span class="co">#&gt;                            Archivo</span></span>
-<span id="cb4-3"><a href=""></a><span class="co">#&gt; 1 c70_total_del_pais_poblacion_c18</span></span>
-<span id="cb4-4"><a href=""></a><span class="co">#&gt; 2 c70_total_del_pais_poblacion_c20</span></span>
-<span id="cb4-5"><a href=""></a><span class="co">#&gt;                                                                                                      Titulo</span></span>
-<span id="cb4-6"><a href=""></a><span class="co">#&gt; 1    Cuadro 18. Total del país. Hogares particulares, personas y cuartos, por régimen de tenencia. Año 1970</span></span>
-<span id="cb4-7"><a href=""></a><span class="co">#&gt; 2 Cuadro 20. Total del país. Hogares particulares, por tamaño del hogar según régimen de tenencia. Año 1970</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">check_repository</span>( <span class="at">year =</span> <span class="dv">1970</span>, </span>
+<span id="cb4-2"><a href=""></a>                  <span class="at">topic =</span> <span class="st">"CONDICIONES HABITACIONALES"</span>, </span>
+<span id="cb4-3"><a href=""></a>                  <span class="at">geolvl =</span> <span class="st">"Total del país"</span>)</span>
+<span id="cb4-4"><a href=""></a><span class="co">#&gt;                            Archivo</span></span>
+<span id="cb4-5"><a href=""></a><span class="co">#&gt; 1 c70_total_del_pais_poblacion_c18</span></span>
+<span id="cb4-6"><a href=""></a><span class="co">#&gt; 2 c70_total_del_pais_poblacion_c20</span></span>
+<span id="cb4-7"><a href=""></a><span class="co">#&gt;                                                                                                      Titulo</span></span>
+<span id="cb4-8"><a href=""></a><span class="co">#&gt; 1    Cuadro 18. Total del país. Hogares particulares, personas y cuartos, por régimen de tenencia. Año 1970</span></span>
+<span id="cb4-9"><a href=""></a><span class="co">#&gt; 2 Cuadro 20. Total del país. Hogares particulares, por tamaño del hogar según régimen de tenencia. Año 1970</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="arcenso---shinyapp-for-consulting" class="slide level2">
-<h2><code>ARcenso()</code> - shinyapp for consulting</h2>
+<section id="arcenso-2" class="slide level2">
+<h2><code>ARcenso()</code></h2>
+<blockquote>
+<p>shinyapp for consulting</p>
+</blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">ARcenso</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">arcenso</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
-<img data-src="images/shiny.png" style="width:100.0%" class="r-stretch"></section>
+<img data-src="images/shiny.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"></section>
 <section id="documentation" class="slide level2">
 <h2>Documentation</h2>
 <div class="cell">
@@ -725,15 +748,16 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
 <h2>Gracias 😁</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="https://avatars.githubusercontent.com/u/45582182?v=4.png" style="border-radius: 80%;;width:60.0%"></p>
-<p><strong>Andrea</strong></p>
+<p><img data-src="https://avatars.githubusercontent.com/u/45582182?v=4.png" style="border-radius: 80%;;width:50.0%"></p>
+<p><a href="https://www.linkedin.com/in/andreasociologa/"><strong>Andrea</strong></a></p>
 <p>Sociologist</p>
 <p>rOpenSci Champion</p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="https://avatars.githubusercontent.com/u/64991969?v=4.png" style="border-radius: 80%;;width:60.0%"></p>
-<p><strong>Emanuel</strong></p>
+<p><img data-src="https://avatars.githubusercontent.com/u/64991969?v=4.png" style="border-radius: 80%;;width:50.0%"></p>
+<p><a href="https://www.linkedin.com/in/eciardullo/"><strong>Emanuel</strong></a></p>
 <p>Statistician</p>
-</div></div>
+</div>
+</div>
 <div class="quarto-auto-generated-content">
 <p><img src="images/arcenso.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -1060,7 +1084,18 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1092,29 +1127,7 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1122,7 +1135,7 @@ Andrea Gomez Vargas &amp; Emanuel Ciardullo
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
