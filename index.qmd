@@ -1,15 +1,15 @@
 ---
-title: "`{ARcenso}`: A Package Born From Chaos, Powered by Community"
+title: "ARcenso: A Package Born From Chaos, Powered by Community"
 author: "Andrea Gomez Vargas & Emanuel Ciardullo"
 format:
   revealjs: 
     theme: custom.scss
     self-contained: false
     slide-number: c/t
-    logo: images/LatinR_hex_secundario.png
+    logo: images/arcenso.png
     highlight-style: a11y
     css: logo.css
-    footer: "[**ARcenso home page **](https://soyandrea.github.io/arcenso/)"
+    footer: "[**`ARcenso home page`**](https://soyandrea.github.io/arcenso/)"
 knitr:
   opts_chunk: 
     echo: true
@@ -21,19 +21,9 @@ from: markdown+emoji
 
 ## `ARcenso`
 
-::: columns
-::: {.column width="30%"}
-
-<br>
-![hex ARcenso](images/arcenso1.png)
-
-:::
-
-::: {.column width="70%"}
 It is a project supported by the rOpenSci Champions program cohort 2023-2024^[[Introducing rOpenSci Champions - Cohort 2023-2024](https://ropensci.org/blog/2024/02/15/champions-program-champions-2024/)], with Andrea Gómez Vargas as lead developer, Emanuel Ciardullo as co-developer and Luis D. Verde as mentor.
-:::
 
-:::
+
 
 
 ## The project
@@ -68,7 +58,14 @@ Currently, the historical census results for **1970, 1980, 1991, 2001, 2010 and 
 :::
 
 
-## Conceptual justification 
+# Conceptual framework
+
+## FAIR principles
+
+
+## handbook 
+
+Diseño conceptual
 
 ::: {.incremental}
 
@@ -89,9 +86,7 @@ Census data is important because:
 # Working process
 
 
-## Question - problem
-
-How to get started?
+## How to get started?
 
 
 ::: {.r-stack}
@@ -102,36 +97,6 @@ How to get started?
 ![logos censales de argentina](images/censos.png){.fragment top=200 left=0 width="80%"}
 
 :::
-
-## Before coding: conceptual design
-
-![](images/esquema3.png)
-
-## Let's get to work :hammer_and_wrench:
-
-::: columns
-::: {.column width="15%"}
-
-
-![](images/python.png)
-<br>
-
-![](images/R.png)
-
-:::
-
-::: {.column width="85%"}
-
-
-- webscraping for downloading census tables
-
-- list the downloaded files by extracting their information
-
-- for the conversion of excel tables into tidy format in Rbase
-
-:::
-
-::: 
 
 
 ## Problems: rain of excels and non-standardized formats
@@ -152,18 +117,50 @@ How to get started?
 
 :::
 
-## step-by-step work
 
-| Stage | Census years | Geographic level | Notes |
-|----|----|----|----|
-| **1** | 1970 | National and 24 jurisdictions | First available census data |
-|  | 1980 | National level | Jurisdiction-level data not available |
-| 2 | 1991 and 2001 | National level |  |
-| 3 | 2010 | National level |  |
-| 4 | 2022 | National level |  |
-| 5 | 1980 and 1991 | 24 jurisdictions |  |
-| 6 | 2001 and 2010 | 24 jurisdictions |  |
-| 7 | 2022 | 24 jurisdictions |  |
+## Let's get to work :hammer_and_wrench:
+
+::: columns
+::: {.column width="15%"}
+
+![](images/python.png)
+<br>
+
+![](images/R.png)
+<br>
+
+![](images/github.png)
+
+:::
+
+::: {.column width="85%"}
+
+REVISAR Y ADAPTAR
+- webscraping for downloading census tables
+
+- list the downloaded files by extracting their information
+
+- for the conversion of excel tables into tidy format in Rbase
+
+:::
+
+::: 
+
+
+
+## Data Availability Roadmap {.tabla-chica}
+
+| Stage | Census years      | Geographic level               | 
+|-------|-------------------|--------------------------------|
+| 1     | 1970              | National and 24 jurisdictions  | 
+|       | 1980              | National level                 | 
+| 2     | 1991 and 2001     | National level                 |                                        
+| 3     | 2010              | National level                 |                                        
+| 4     | 2022              | National level                 |                                        
+| 5     | 1980 and 1991     | 24 jurisdictions               |                                        
+| 6     | 2001 and 2010     | 24 jurisdictions               |                                        
+| 7     | 2022              | 24 jurisdictions               |                                        
+
 
 
 
@@ -221,6 +218,7 @@ ARcenso()
 knitr::include_url("https://soyandrea.github.io/arcenso/",height = 600)
 ```
 
+# Comunidad
 
 # Next steps 💫
 
@@ -237,7 +235,7 @@ knitr::include_url("https://soyandrea.github.io/arcenso/",height = 600)
 
 :::
 
-## Gracias 😁
+## Thanks 😁
 
 ::: columns
 ::: {.column width="50%"}
